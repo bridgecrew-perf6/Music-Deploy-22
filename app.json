@@ -1,29 +1,29 @@
 {
   "name": "Cilik-Userbot",
-  "description": "CILIK-USERBOT KHUSUS YANG DIGUNAKAN UNTUK MEMBANTAI PARA PETINGGI DI TELEGRAM.",
+  "description": "[Cilik-Userbot] userbot Telegram modular yang berjalan pada Python 3.9+",
   "logo": "https://telegra.ph/file/ac134f6d295ad0c03af9b.jpg",
-  "keywords": [
-    "telegram",
-    "userbot",
-    "plugin",
-    "modular",
-    "productivity"
-  ],
-  "repository": "https://github.com/grey423/Cilik-Userbot/Cilik-Userbot",
-  "telegram": "https://t.me/greyyvbss",
-  "success_url": "https://t.me/CilikProject",
+  "keywords": ["telegram", "userbot", "cilikuserbot", "modular", "python"],
+  "repository": "https://github.com/grey423/CilikUserbot",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Dapatkan Api Key di web my.telegram.org",
+      "description": "Dapatkan API KEY di web my.telegram.org Masukan yg APP ID Telegram",
       "required": true
     },
     "API_HASH": {
-      "description": "Dapatkan Api Hash Di Web my.telegram.org",
+      "description": "Dapatkan API Hash di web my.telegram.org",
       "required": true
     },
+    "BOT_TOKEN": {
+      "description": "Buat Bot di t.me/botfather Masukan BOT tokennya disini",
+      "required": false
+    },
+    "BOT_USERNAME": {
+      "description": "Buat Bot di t.me/botfather Masukan BOT Usernamenya pake @",
+      "required": false
+    },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @IDnyaKosong di telegram",
+      "description": "Dapatkan String Session di Grup » https://t.me/CilikSupport » Lalu ketik #string",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -31,124 +31,40 @@
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
-      "value": "Check Di Heroku Dashboard Mu",
-      "required": true
-    },
-    "BOTLOG": {
-      "description": "Kalo Mau Off in BOTLOG Ganti False",
-      "value": "True",
+      "description": "Ambil Heroku API KEY mu disini » https://dashboard.heroku.com/account",
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "description": "Buatlah grup telegram publik lalu masukan @MissRose_bot ketik /id, masukan id grup nya disini. contoh: -1001473548xxx",
+      "value": "-100",
       "required": true
-    },
-    "G_BAN_LOGGER_GROUP": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "required": true
-    },
-    "COUNTRY": {
-      "description": "Set your Country to be used in the .time and .date commands.",
-      "value": "ID",
-      "required": true
-    },
-    "TZ_NUMBER": {
-      "description": "Change this value in case your country has multiple Time Zones.",
-      "value": "1",
-      "required": false
     },
     "PM_AUTO_BAN": {
-      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
-      "value": "False",
-      "required": true
-    },
-    "ANTI_SPAMBOT": {
-      "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
-      "value": "False"
-    },
-    "ANTI_SPAMBOT_SHOUT": {
-      "description": "Report spambots to @admins in groups after they join, just in case when you don't have admin powers to kick that shit yourself.",
-      "value": "False"
-    },
-    "TMP_DOWNLOAD_DIRECTORY": {
-      "description": "Download location for many modules (GDrive, .download etc..)",
-      "value": "./downloads/"
-    },
-    "CLEAN_WELCOME": {
-      "description": "When a new person joins, the old welcome message is deleted.",
-      "value": "True"
-    },
-    "HEROKU_MEMEZ": {
-      "description": "This should be True if the userbot is running on a Heroku Dyno.",
+      "description": "PM Auto-Ban adalah module untuk bot welcome otomatis ketika ada orang ngePC kamu, jika Mau di matikan ubah ke False",
       "value": "True",
-      "required": true
-    },
-    "DEFAULT_BIO": {
-      "description": "Default Bio Mu.",
-      "value": "Cilik-Userbot",
       "required": false
-    },
-    "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
-      "required": true
-    },
-     "ALIVE_LOGO": {
-      "description": "Gambar dalam module .alive",
-      "value": "https://telegra.ph/file/ac134f6d295ad0c03af9b.jpg",
-      "required": false
-    },
-    "CILIK_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .cilikalive (Isi Terserah)",
-      "value": "I'am Using Cilik-Userbot ",
-      "required": false 
-    },
-    "S_PACK_NAME": {
-      "description": "Nama Sticker Pack Mu",
-      "required": false
-    },
-    "WEATHER_DEFCITY": {
-      "description": "Set the default city for the userbot's weather module.",
-      "value": "Bogor",
-      "required": false
-    },
-    "LOGSPAMMER": {
-      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
-      "value": "True",
-      "required": true
-    },
-    "BOT_TOKEN": {
-      "description": "Set this to enable inline bot helper. get the token from @BotFather",
-      "required": true
-    },
-    "BOT_USERNAME": {
-      "description": "Username Bot Kamu Di @BotFather, Tanpa @",
-      "value": "BotFather",
-      "required": true
     }
   },
   "addons": [
     {
-      "plan": "heroku-postgresql",
+    "plan": "heroku-postgresql",
       "options": {
         "version": "12"
       }
     }
-  ],"buildpacks": [{
-    "url": "https://github.com/heroku/heroku-buildpack-python.git"
-  }, {
-    "url": "https://github.com/heroku/heroku-buildpack-redis"
-  }, {
-    "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
-  }, {
-    "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab"
-  },{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  }, {
-    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
-  }, {
-    "url": "https://github.com/amivin/aria2-heroku"
-  }, {
-    "url": "https://github.com/stevo550/buildpack-slug-cleaner"
-  }]
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
